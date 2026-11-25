@@ -16,6 +16,8 @@ I want software that can adapt when our understanding improves. Working implemen
 - **Resist abstraction for its own sake.** Do not build plugin frameworks, extension points, adapters, or configuration surfaces for hypothetical alternatives. Introduce them when concrete variation or coupling justifies the maintenance cost.
 - **Protect external commitments more than internal shape.** Public interfaces, persisted schemas, and integration protocols require versioning and compatibility planning; private modules may evolve more freely.
 
+- **Retire deliberately.** Adaptability includes removing superseded mechanisms and invalidating obsolete information. A temporary bridge is an owned obligation, not a permanent extension point. Preserve authorized historical access without restoring current authority. See [capability lifecycles](CAPABILITY_LIFECYCLE.md).
+
 ## Review questions
 
 Before implementing or extending a substantial feature, ask:
@@ -25,6 +27,8 @@ Before implementing or extending a substantial feature, ask:
 3. Would adding a new variant require editing a central engine or only supplying a new implementation or declarative specification?
 4. Can this subsystem be tested and replaced independently? What observable contracts must be preserved?
 5. Is a proposed boundary justified by demonstrated change pressure, or is it speculative infrastructure?
+
+6. What becomes obsolete, who still depends on it, and how will we prove it cannot affect current behavior after retirement?
 
 Apply these questions proportionally to the work. An isolated change should stay isolated; a genuine new responsibility should not be bolted onto the wrong subsystem.
 
