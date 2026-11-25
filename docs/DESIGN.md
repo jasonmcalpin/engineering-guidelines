@@ -29,6 +29,10 @@ A first implementation can be intentionally simple and correct for its original 
 
 The decision is **not** automatically to refactor: retain the current structure when it still fits. When it does not, integrate bounded, behavior-preserving restructuring into feature work, keeping intentional new behavior separately specified and verified. This preserves the distinction between structural refactoring and wider feature delivery or optimization.
 
+## Capability and information retirement
+
+A replacement is not complete merely because the new path works. Obsolete paths remain maintenance obligations while reachable; superseded data may be structurally valid but no longer authoritative. The always-on rules require explicit disposition, and `capability-retirement` supplies the inventory, transition, removal and negative-verification procedure. It complements requirements review, architecture review, refactoring and change verification. Historical retention is distinct from operational compatibility; neither instruction authorizes destructive data changes. See [lifecycle rationale](CAPABILITY_LIFECYCLE.md) and [acceptance cases](CAPABILITY_RETIREMENT_CASES.md).
+
 ## Non-goals
 
 - Enforcing security boundaries, permissions, or CI policy.
