@@ -34,7 +34,7 @@ After cloning, run `git submodule update --init`. On Windows, enable Developer M
 1. Confirm each agent loads the intended instructions and skills in a fresh session; test discovery explicitly and implicitly.
 2. Run `node vendor/engineering-guidelines/scripts/sync-into-project.mjs --check` in CI.
 3. Confirm project-specific rules outside the generated region are preserved and effective.
-4. Run representative positive and negative cases from [requirements-review acceptance cases](REQUIREMENTS_REVIEW_CASES.md).
+4. Run representative positive and negative cases from [requirements-review acceptance cases](REQUIREMENTS_REVIEW_CASES.md) and [capability-retirement acceptance cases](CAPABILITY_RETIREMENT_CASES.md).
 5. Review the resulting diff and actual behavior. Instructions influence agent behavior but cannot guarantee compliance.
 
 ## Verification boundaries
