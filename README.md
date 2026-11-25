@@ -15,6 +15,8 @@ Inspired by [Karpathy-Inspired Claude Code Guidelines](https://github.com/multic
 7. **Design for adaptability:** isolate decisions that may change independently, keep boundaries replaceable when justified, and treat refactoring as normal engineering work.
 
 
+8. **Manage lifecycles:** explicitly retire replaced implementations and superseded information; maintain compatibility only under an owned, justified contract.
+
 These are instructions to the coding agent, not an enforcement mechanism.
 
 ## Repository layout
@@ -27,6 +29,7 @@ AGENTS.md
   regression-fix/SKILL.md
   change-verification/SKILL.md
   refactoring/SKILL.md
+  capability-retirement/SKILL.md
 docs/
   INSTALLATION.md
   DESIGN.md
@@ -46,13 +49,14 @@ See [installation instructions](docs/INSTALLATION.md) for Codex, Claude Code, an
 | `architecture-review` | A design decision or change crosses architectural boundaries |
 | `regression-fix` | Existing behavior regressed and needs diagnosis and recurrence protection |
 | `change-verification` | A substantial change or PR needs contract and acceptance checks |
+| `capability-retirement` | Replace or retire a capability, change authority, expire information, or introduce temporary compatibility |
 | `refactoring` | Review architectural fitness during substantial feature extensions, or perform standalone behavior-preserving restructuring |
 
 Skills are optional, task-specific guidance. They do not replace project architecture, domain constraints, or human review.
 
 ## Design and provenance
 
-See [human-centered interfaces](docs/HUMAN_CENTERED_INTERFACES.md), [standards-first interoperability](docs/STANDARDS_FIRST_INTEROPERABILITY.md), [MCP interface contracts](docs/MCP_INTERFACE_CONTRACTS.md), [adaptability and modularity](docs/ADAPTABILITY.md), [design rationale](docs/DESIGN.md), [task examples](docs/EXAMPLES.md), [requirements-review acceptance cases](docs/REQUIREMENTS_REVIEW_CASES.md), and [attribution](ATTRIBUTION.md).
+See [capability lifecycles](docs/CAPABILITY_LIFECYCLE.md), [retirement acceptance cases](docs/CAPABILITY_RETIREMENT_CASES.md), [human-centered interfaces](docs/HUMAN_CENTERED_INTERFACES.md), [standards-first interoperability](docs/STANDARDS_FIRST_INTEROPERABILITY.md), [MCP interface contracts](docs/MCP_INTERFACE_CONTRACTS.md), [adaptability and modularity](docs/ADAPTABILITY.md), [design rationale](docs/DESIGN.md), [task examples](docs/EXAMPLES.md), [requirements-review acceptance cases](docs/REQUIREMENTS_REVIEW_CASES.md), and [attribution](ATTRIBUTION.md).
 
 Key departure from the original inspiration: this project explicitly prioritizes maintainable system architecture and dependency-aware contract changes over strictly minimizing changed lines or code size.
 

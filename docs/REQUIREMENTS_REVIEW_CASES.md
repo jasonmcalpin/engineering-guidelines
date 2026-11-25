@@ -101,6 +101,12 @@ Use each case as an evaluation prompt **before revealing the omission and expect
 
 **Expected result:** If the cited contract and runtime evidence support the claim, classify registration as **already satisfied**, not a required addition. Continue checking only genuinely uncovered requirements. Do not equate a user's assertion of verification with independent evidence.
 
+## Case J — replacement leaves old authority reachable
+
+**Prompt to evaluate:** "Replace the existing persistence implementation with the approved new database engine. The old engine is no longer supported."
+
+**Expected required findings:** Identify callers, fallback branches, deployment registrations, stale data and recovery paths; define their disposition; preserve approved domain contracts; verify replacement behavior and absence of old access. Do not infer permission to delete retained data. See [retirement acceptance cases](CAPABILITY_RETIREMENT_CASES.md).
+
 ## Evaluation record
 
 For each case record: Codex version/date; whether `requirements-review` was explicitly invoked or naturally selected; installed guidance/skill paths; relevant project context provided; omissions identified; coverage status and required/recommended/optional priority for remaining actions; duplicate-contract requests; false positives; and verification evidence. Mark outcomes **observed**, **unverified**, or **blocked**. Do not infer automatic skill invocation from a well-written answer.

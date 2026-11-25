@@ -32,6 +32,13 @@ Use these defaults unless a more specific repository instruction or explicit use
 - Working implementations may be refactored or replaced when better boundaries become clear. Protect observable contracts and migration paths while allowing internal designs to evolve.
 - For the motivation and review questions, see [adaptability and modularity](docs/ADAPTABILITY.md).
 
+## Manage capability and information lifecycles
+- When replacing a capability, implementation, interface, policy or authoritative information source, identify what becomes obsolete and explicitly decide its disposition: retain, maintain during a bounded transition, archive without current authority, or remove. Replacement is incomplete while unintentionally accessible obsolete paths remain.
+- Replace implementations at established boundaries; do not introduce parallel dispatchers, interception wrappers, dual authorities or hidden fallbacks merely to preserve obsolete behavior.
+- Retain compatibility only for an established requirement or authorized transition. Identify consumers, owner, maintenance and verification obligations, and an exit condition with tracked removal work for temporary compatibility. Do not silently discard required public contracts.
+- Separate historical retention from current authority. Invalidate or isolate superseded information, indexes, caches, policies and credentials so they cannot influence current behavior outside an explicitly supported contract. Respect retention obligations and authorization before destructive data operations.
+- Verify both the replacement and the absence of retired behavior, including runtime discovery, failures and recovery. Use the `capability-retirement` skill for substantial replacements, migrations, authority changes and decommissioning. See [capability and information lifecycles](docs/CAPABILITY_LIFECYCLE.md).
+
 ## Reassess architecture when extending features
 - Before materially expanding an existing feature, evaluate whether its current responsibilities, abstractions, ownership boundaries, and dependencies still fit the new requirements.
 - Look for concrete change pressure: accumulating unrelated responsibilities, duplicated logic, tangled dependencies, proliferating special cases, or incompatible persistence/consistency needs.
