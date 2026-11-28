@@ -86,6 +86,12 @@ Use these defaults unless a more specific repository instruction or explicit use
 - Define acceptance checks for discovery, registration metadata, text-only and structured results, schema validation, errors, authorization, and compatibility. A successful tool invocation alone does not prove agent usability.
 - For MCP-specific design and review criteria, see [MCP interface contracts](docs/MCP_INTERFACE_CONTRACTS.md).
 
+## Execute continuously and verify economically
+- Treat the complete authorized outcome as the task. Plans, stages, skills and intermediate commits are internal execution structures, not automatic approval, reporting or full-verification gates. Continue through implementation, integration, correction, documentation and verification without routine handoffs; stop for completion, a material decision requiring authority, missing prerequisites or scope limits. Record progress without interrupting execution.
+- Implement coherent features in dependency order. Define acceptance criteria early; use focused intermediate checks when they resolve uncertainty, protect risky invariants or prevent costly rework. Batch comprehensive verification at feature, subsystem or release boundaries; honor explicit safety, migration and CI gates.
+- Verify according to change impact. Reuse existing coverage and evidence while the relevant implementation, dependencies, configuration and assumptions remain unchanged. Test shared guarantees at their owning boundary; consumers verify their own behavior and integration, not duplicate the subsystem suite. Add or extend tests for uncovered changed contracts and material risks; avoid tests of transient implementation states and redundant coverage. Test-first is useful for regressions or specific risks, not a mandatory feature workflow.
+- Use local commits as useful recovery or review checkpoints without treating each as a separate completed task. Consolidate worklogs and completion reports at the requested outcome; fix in-scope verification failures and continue. Do not bypass required CI, release, security or authorization gates.
+
 ## Deliver verifiable outcomes
 - Define acceptance criteria before substantial implementation, including failure cases and compatibility where relevant.
 - When practical, reproduce bugs with a failing test before fixing them. Validate architecture through contract and integration evidence, not unit tests alone.
