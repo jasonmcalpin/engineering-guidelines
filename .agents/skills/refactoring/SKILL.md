@@ -24,4 +24,6 @@ description: Assess architectural fitness and restructure existing code when mai
 8. Review the resulting file tree and changed modules for misplaced files, responsibility sprawl, unnecessary coupling, duplicated functions, and unjustified new directories. Verify old behavior, new capabilities (integrated mode), interfaces, migrations, and relevant performance metrics where applicable. Inspect the complete diff for accidental or unrelated changes.
 9. Report the organization review and structural decision (including why the existing layout was retained, if applicable), changed ownership or dependencies, intentional behavioral differences, verification evidence, and unresolved risk. If no refactor was warranted, say why.
 
+For integrated work, coordinate characterization and final verification with the enclosing feature. Add intermediate checks only where needed to protect a preservation contract or resolve risk; do not repeat the enclosing change-verification workflow or stop for a separate report.
+
 Do not equate modernization with replacing libraries or adding abstractions. A working feature can still require restructuring when its responsibilities change; an initially simple implementation does not automatically require it.
