@@ -19,6 +19,10 @@ Inspired by [Karpathy-Inspired Claude Code Guidelines](https://github.com/multic
 
 These are instructions to the coding agent, not an enforcement mechanism.
 
+## Execution cadence
+
+Build the complete authorized outcome in dependency order. Use focused intermediate checks to resolve concrete risks, reuse valid evidence and existing coverage, and consolidate comprehensive verification and reporting at meaningful feature or release boundaries. Commits and skill stages do not automatically require separate completion reports or approval. Explicit safety and release gates remain mandatory.
+
 ## Repository layout
 
 ```text
